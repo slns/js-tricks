@@ -112,7 +112,7 @@ const array = [3, 0, 6, 7, '', false];
 array.filter(Boolean);
 // Output
 (3) [3, 6, 7]
-``|
+```
 ## 5. Use Logical Operators for various conditions
 
 If you want to reduce nested if..else or switch cases, you can simply play with basic of logical operators AND/OR.
