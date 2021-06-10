@@ -141,7 +141,7 @@ array.filter((item,idx,arr) => arr.indexOf(item) === idx);
 // or
 const nonUnique = [...new Set(array)];
 // Output: [5, 4, 7, 8, 9, 2]
-``|
+```
 ## 7. Create a Counter Object or Map
 
 Most of the time, the requirement to solve problem by creating counter object or map which tracks variables as keys with their frequency/occurrences as values.
