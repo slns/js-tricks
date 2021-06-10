@@ -23,7 +23,7 @@ These approaches will definitely help you in:
 Most of these JavaScript Hacks uses techniques from ECMAScript6(ES2015) onwards, though the latest version is ECMAScript11(ES2020).
 
 Note: All below tricks have been tested on the Console of Google Chrome.
-1. Declare and Initialize Arrays
+## 1. Declare and Initialize Arrays
 
 We can initialize array of particular size with default values like "", null or 0. You might have used these for the 1-D array but how about initializing 2-D array/matrix?
 ```
@@ -41,7 +41,7 @@ const matrix = Array(5).fill(0).map(()=>Array(5).fill(0));
 4: (5) [0, 0, 0, 0, 0]
 length: 5
 ```
-2. Find out the sum, minimum and maximum value
+## 2. Find out the sum, minimum and maximum value
 
 We should make use of reduce method to quickly find basic maths operations.
 ```
@@ -62,7 +62,7 @@ array.reduce((a,b) => a>b?a:b);
 array.reduce((a,b) => a<b?a:b);
 // Output: 2
 ```
-3. Sorting Array of String, Numbers or Objects
+## 3. Sorting Array of String, Numbers or Objects
 
 We have inbuilt methods sort() and reverse() for sorting strings but How about numbers or array of objects?
 Let's check out sorting hacks for Numbers and Objects in Increasing and Decreasing order as well.
@@ -104,7 +104,7 @@ objectArr.sort((a, b) => a.last_name.localeCompare(b.last_name));
 2: {first_name: "Pirate", last_name: "Prentice"}
 length: 3
 ```
-4. Ever need to filter falsy values out of an array?
+## 4. Ever need to filter falsy values out of an array?
 
 Falsy values like 0, undefined, null, false, "", '' can be omitted easily through below trick
 ```
@@ -113,7 +113,7 @@ array.filter(Boolean);
 // Output
 (3) [3, 6, 7]
 ``|
-5. Use Logical Operators for various conditions
+## 5. Use Logical Operators for various conditions
 
 If you want to reduce nested if..else or switch cases, you can simply play with basic of logical operators AND/OR.
 ```
@@ -132,7 +132,7 @@ foo === 5 || doSomething();
 // is the same thing as if (foo != 5) then doSomething();
 // Output: 10
 ```
-6. Remove Duplicates values
+## 6. Remove Duplicates values
 
 You might have used indexOf() with for loop which return first found index or newer one includes() which returns boolean true/false from the array to find out/remove duplicates. Here's we have 2 quicker approaches.
 ```
@@ -142,7 +142,7 @@ array.filter((item,idx,arr) => arr.indexOf(item) === idx);
 const nonUnique = [...new Set(array)];
 // Output: [5, 4, 7, 8, 9, 2]
 ``|
-7. Create a Counter Object or Map
+## 7. Create a Counter Object or Map
 
 Most of the time, the requirement to solve problem by creating counter object or map which tracks variables as keys with their frequency/occurrences as values.
 ```
@@ -168,7 +168,7 @@ const countMap = new Map();
 // Output
 Map(5) {"k" => 2, "a" => 3, "p" => 2, "i" => 2, "l" => 2}
 ```
-8. Ternary Operator is cool
+## 8. Ternary Operator is cool
 
 You can avoid nested conditional if..elseif..elseif with ternary operators.
 ```
@@ -182,7 +182,7 @@ function Fever(temp) {
 Fever(97): "Take Some Rest!" 
 Fever(100): "Visit Doctor!"
 ```
-9. Quicker for loops compare to legacy onces
+## 9. Quicker for loops compare to legacy onces
 ```
     for and for..in gets you index by default, but you can use arr[index].
     for..in accepts non numeric as well so avoid it.
@@ -190,7 +190,7 @@ Fever(100): "Visit Doctor!"
     forEach can get you index also but for...of can't.
     for and for...of considers holes in array but other 2 do not.
 ```
-10. Merge 2 objects
+## 10. Merge 2 objects
 
 Often we need to merge multiple objects in our daily tasks.
 ```
@@ -219,7 +219,7 @@ secondary: "Lass Secondary School"
 sleeping: "Pro"
 swimming: "Average"
 ```
-11. Arrow Functions
+## 11. Arrow Functions
 
 An arrow function expression is a compact alternative to a traditional function expression, but is limited and can't be used in all situations. Since they have lexical scope (parental scope) and does not have their own this and arguments hence they refer to the environment in which they are defined.
 ```
@@ -245,7 +245,7 @@ person.sayName();
 // Output
 ""
 ```
-12. Optional Chaining
+## 12. Optional Chaining
 
 The optional chaining ?. stops the evaluation if the value before ?. is undefined or null and returns undefined.
 ```
@@ -261,7 +261,7 @@ user.employ?.name;
 user.employ.name
 // Output: VM21616:1 Uncaught TypeError: Cannot read property 'name' of undefined
 ```
-13. Shuffle an Array
+## 13. Shuffle an Array
 
 Making use of inbuilt Math.random() method.
 ```
@@ -274,7 +274,7 @@ list.sort(() => {
 // Call it again
 (9) [4, 1, 7, 5, 3, 8, 2, 9, 6]
 ```
-14. Nullish Coalescing Operator
+## 14. Nullish Coalescing Operator
 
 The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
 ```
@@ -284,7 +284,7 @@ const foo = null ?? 'my school';
 const baz = 0 ?? 42;
 // Output: 0
 ```
-15. Rest & Spread operators
+## 15. Rest & Spread operators
 
 Those mysterious 3 dots ... can rest or spread!🤓
 ```
@@ -304,7 +304,7 @@ lyrics;
 // Output: 
 (5) ["head", "shoulders", "knees", "and", "toes"]
 ```
-16. Default Parameters
+## 16. Default Parameters
 ```
 const search = (arr, low=0,high=arr.length-1) => {
     return high;
@@ -313,7 +313,7 @@ search([1,2,3,4,5]);
 
 // Output: 4
 ```
-17. Convert Decimal to Binary or Hexa
+## 17. Convert Decimal to Binary or Hexa
 
 We can use some in-built methods like .toPrecision() or .toFixed() to achieve much of helping functionalities while solving problems.
 ```
@@ -326,7 +326,7 @@ num.toString(16);
 num.toString(8);
 // Output: "12"
 ```
-18. Simple Swap 2 values using Destructuring
+## 18. Simple Swap 2 values using Destructuring
 ```
 let a = 5;
 let b = 8;
@@ -336,7 +336,7 @@ let b = 8;
 // Output
 (2) [8, 5]
 ```
-19. Single-liner Palindrome check
+## 19. Single-liner Palindrome check
 
 Well, this is not a shorthand trick overall but it will give you clear idea to play with strings.
 ```
@@ -346,7 +346,7 @@ function checkPalindrome(str) {
 checkPalindrome('naman');
 // Output: true
 ```
-20. Turn Object attributes into an Array of attributes
+## 20. Turn Object attributes into an Array of attributes
 ```
 Using Object.entries(),Object.keys() and Object.values()
 
